@@ -1,0 +1,5 @@
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie, imput_html: { class: 'select2'} %>
+  <%= f.input :comment %>
+  <%= f.submit %>
+<% end %>

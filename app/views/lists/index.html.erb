@@ -1,7 +1,6 @@
 <ul>
   <% @lists.each do |list| %>
-    <li><%= list[:name]%> <%= link_to "check out this list" %> </li>
+    <li><%= link_to list[:name], list_path(list)%> </li>
   <% end %>
 </ul>
-
-<%= link_to "add new list", list_path(:id) %>
+<%= link_to "add new list", new_list_path %>
